@@ -1,0 +1,42 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.lexoffice.io/v1/invoices/59a3008f-9d96-4629-92ed-74fdbb2a4767
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer n2.o0c.raladGqUDySbv9ZKZaNKME0pf7W3YulfNjlaTV1TC
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 31 Aug 2023 10:17:57 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1415'
+      Connection:
+      - keep-alive
+      X-Amzn-Requestid:
+      - ed4cdcf0-e908-4735-a565-cc2e789e71e2
+      X-Amz-Apigw-Id:
+      - KhVRWFCxliAFmAA=
+      X-Amzn-Trace-Id:
+      - Root=1-64f068d5-1feb07330459cbf42804bfa7
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpZCI6IjU5YTMwMDhmLTlkOTYtNDYyOS05MmVkLTc0ZmRiYjJhNDc2NyIsIm9yZ2FuaXphdGlvbklkIjoiMDY5NzNiNmUtODkwOS00MmM3LWJmMWMtZDI5MTNhYWJkZTkxIiwiY3JlYXRlZERhdGUiOiIyMDIzLTA4LTMxVDEyOjE2OjMyLjU3MSswMjowMCIsInVwZGF0ZWREYXRlIjoiMjAyMy0wOC0zMVQxMjoxNjozMi41NzMrMDI6MDAiLCJ2ZXJzaW9uIjoxLCJsYW5ndWFnZSI6ImRlIiwiYXJjaGl2ZWQiOmZhbHNlLCJ2b3VjaGVyU3RhdHVzIjoiZHJhZnQiLCJ2b3VjaGVyTnVtYmVyIjoiUkUwMDAxIiwidm91Y2hlckRhdGUiOiIyMDIzLTA4LTMxVDAwOjAwOjAwLjAwMCswMjowMCIsImFkZHJlc3MiOnsibmFtZSI6IkFydCBkZXIgR2VzdGFsdHVuZyBHYlIiLCJzdXBwbGVtZW50IjoiYy9vIENocmlzdG9waCBCw7ZubmluZyIsInN0cmVldCI6IlBhcmtzdHJhw59lIDE3IiwiY2l0eSI6IkJhZCBWaWxiZWwiLCJ6aXAiOiI2MTExOCIsImNvdW50cnlDb2RlIjoiREUifSwibGluZUl0ZW1zIjpbeyJ0eXBlIjoiY3VzdG9tIiwibmFtZSI6IklULVNlcnZpY2VzIiwiZGVzY3JpcHRpb24iOiJXZWJlbnR3aWNrbHVuZyIsInF1YW50aXR5IjoxLCJ1bml0TmFtZSI6IlN0dW5kZSIsInVuaXRQcmljZSI6eyJjdXJyZW5jeSI6IkVVUiIsIm5ldEFtb3VudCI6MTAwLCJncm9zc0Ftb3VudCI6MTE5LCJ0YXhSYXRlUGVyY2VudGFnZSI6MTl9LCJkaXNjb3VudFBlcmNlbnRhZ2UiOjAsImxpbmVJdGVtQW1vdW50IjoxMDAuMDB9XSwidG90YWxQcmljZSI6eyJjdXJyZW5jeSI6IkVVUiIsInRvdGFsTmV0QW1vdW50IjoxMDAuMDAsInRvdGFsR3Jvc3NBbW91bnQiOjExOS4wMCwidG90YWxUYXhBbW91bnQiOjE5LjAwfSwidGF4QW1vdW50cyI6W3sidGF4UmF0ZVBlcmNlbnRhZ2UiOjE5LjAwLCJ0YXhBbW91bnQiOjE5LjAwLCJuZXRBbW91bnQiOjEwMC4wMH1dLCJ0YXhDb25kaXRpb25zIjp7InRheFR5cGUiOiJuZXQifSwicGF5bWVudENvbmRpdGlvbnMiOnsicGF5bWVudFRlcm1MYWJlbCI6IlphaGxiYXIgc29mb3J0LCByZWluIG5ldHRvIiwicGF5bWVudFRlcm1MYWJlbFRlbXBsYXRlIjoiWmFobGJhciBzb2ZvcnQsIHJlaW4gbmV0dG8iLCJwYXltZW50VGVybUR1cmF0aW9uIjowfSwic2hpcHBpbmdDb25kaXRpb25zIjp7InNoaXBwaW5nRGF0ZSI6IjIwMjMtMDgtMzFUMDA6MDA6MDAuMDAwKzAyOjAwIiwic2hpcHBpbmdUeXBlIjoiZGVsaXZlcnkifSwiY2xvc2luZ0ludm9pY2UiOmZhbHNlLCJyZWxhdGVkVm91Y2hlcnMiOltdLCJpbnRyb2R1Y3Rpb24iOiJVbnNlcmUgTGllZmVydW5nZW4vTGVpc3R1bmdlbiBzdGVsbGVuIHdpciBJaG5lbiB3aWUgZm9sZ3QgaW4gUmVjaG51bmcuIiwicmVtYXJrIjoiVmllbGVuIERhbmsgZsO8ciBkaWUgZ3V0ZSBadXNhbW1lbmFyYmVpdC4iLCJ0aXRsZSI6IlJlY2hudW5nIn0=
+  recorded_at: Thu, 31 Aug 2023 10:17:55 GMT
+recorded_with: VCR 6.2.0

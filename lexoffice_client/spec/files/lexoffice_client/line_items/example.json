@@ -1,0 +1,15 @@
+{
+  "type":"custom",
+  "name":"IT-Services",
+  "description":"Webentwicklung",
+  "quantity":1,
+  "unit_name":"Stunde",
+  "unit_price":{
+    "currency":"EUR",
+    "net_amount":100,
+    "gross_amount":119,
+    "tax_rate_percentage":19
+  },
+  "discount_percentage":0,
+  "line_item_amount":100.0
+}

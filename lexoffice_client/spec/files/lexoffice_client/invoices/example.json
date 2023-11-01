@@ -1,0 +1,69 @@
+{
+  "id":"59a3008f-9d96-4629-92ed-74fdbb2a4767",
+  "organizationId":"06973b6e-8909-42c7-bf1c-d2913aabde91",
+  "createdDate":"2023-08-31T12:16:32.571+02:00",
+  "updatedDate":"2023-08-31T12:16:32.573+02:00",
+  "version":1,
+  "language":"de",
+  "archived":false,
+  "voucherStatus":"draft",
+  "voucherNumber":"RE0001",
+  "voucherDate":"2023-08-31T00:00:00.000+02:00",
+  "address":{
+    "name":"Art der Gestaltung GbR",
+    "supplement":"c/o Christoph Bönning",
+    "street":"Parkstraße 17",
+    "city":"Bad Vilbel",
+    "zip":"61118",
+    "countryCode":"DE"
+  },
+  "lineItems":[
+    {
+      "type":"custom",
+      "name":"IT-Services",
+      "description":"Webentwicklung",
+      "quantity":1,
+      "unitName":"Stunde",
+      "unitPrice":{
+        "currency":"EUR",
+        "netAmount":100,
+        "grossAmount":119,
+        "taxRatePercentage":19
+      },
+      "discountPercentage":0,
+      "lineItemAmount":100.00
+    }
+  ],
+  "totalPrice":{
+    "currency":"EUR",
+    "totalNetAmount":100.00,
+    "totalGrossAmount":119.00,
+    "totalTaxAmount":19.00
+  },
+  "taxAmounts":[
+    {
+      "taxRatePercentage":19.00,
+      "taxAmount":19.00,
+      "netAmount":100.00
+    }
+  ],
+  "taxConditions":{
+    "taxType":"net"
+  },
+  "paymentConditions":{
+    "paymentTermLabel":"Zahlbar sofort, rein netto",
+    "paymentTermLabelTemplate":"Zahlbar sofort, rein netto",
+    "paymentTermDuration":0
+  },
+  "shippingConditions":{
+    "shippingDate":"2023-08-31T00:00:00.000+02:00",
+    "shippingType":"delivery"
+  },
+  "closingInvoice":false,
+  "relatedVouchers":[
+    
+  ],
+  "introduction":"Unsere Lieferungen/Leistungen stellen wir Ihnen wie folgt in Rechnung.",
+  "remark":"Vielen Dank für die gute Zusammenarbeit.",
+  "title":"Rechnung"
+}

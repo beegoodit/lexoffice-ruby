@@ -1,0 +1,98 @@
+en:
+  activemodel:
+    models:
+      lexoffice_client/contact/read_service:
+        one: "Read contact service"
+        other: "Read contact services"
+      lexoffice_client/invoice/read_service:
+        one: "Read invoice service"
+        other: "Read invoice services"
+      lexoffice_client/address:
+        one: "Lexoffice Address"
+        other: "Lexoffice Addresses"
+      lexoffice_client/company:
+        one: "Lexoffice Company"
+        other: "Lexoffice Companies"
+      lexoffice_client/contact:
+        one: "Lexoffice Contact"
+        other: "Lexoffice Contacts"
+      lexoffice_client/document:
+        one: "Lexoffice Document"
+        other: "Lexoffice Documents"
+      lexoffice_client/invoice:
+        one: "Lexoffice Invoice"
+        other: "Lexoffice Invoices"
+      lexoffice_client/role:
+        one: "Lexoffice Role"
+        other: "Lexoffice Roles"
+    attributes:
+      shared: &shared
+        id: "ID"
+      lexoffice_client/contact/read_service:
+        contact_id: "Contact"
+      lexoffice_client/invoice/read_service:
+        invoice_id: "Invoice"
+      lexoffice_client/address:
+        city: "City"
+        contact: "Contact"
+        country_code: "Country Code"
+        name: "Name"
+        street: "Street"
+        supplement: "Supplement"
+        zip: "Zip"
+      lexoffice_client/company:
+        allow_tax_free_invoices: "Allow tax free invoices"
+        name: "Name"
+        tax_number: "Tax Number"
+        vat_registration_id: "VAT Registration"
+      lexoffice_client/contact:
+        << : *shared
+        addresses: "Adresses"
+        archived: "Archived"
+        company: "Company"
+        email_addresses: "Email Addresses"
+        organization_id: "Organization-ID"
+        roles: "Roles"
+        version: "Version"
+      lexoffice_client/invoice:
+        << : *shared
+        address: "Address"
+        archived: "Archived"
+        closing_invoice: "Closing Invoice"
+        created_date: "Created Date"
+        due_date: "Due Date"
+        introduction: "Introduction"
+        files: "Files"
+        language: "Language"
+        line_items: "Line Items"
+        organization_id: "Organization ID"
+        payment_conditions: "Payment Conditions"
+        related_vouchers: "Related Vouchers"
+        remark: "Remark"
+        shipping_conditions: "Shipping Conditions"
+        tax_amounts: "Tax Amounts"
+        tax_conditions: "Tax Conditions"
+        title: "Title"
+        total_price: "Total Price"
+        updated_date: "Updated Date"
+        version: "Version"
+        voucher_date: "Voucher Date"
+        voucher_number: "Voucher Number"
+        voucher_status: "Voucher Status"
+      lexoffice_client/line_item:
+        << : *shared
+        type: "Type"
+        name: "Name"
+        description: "Description"
+        quantity: "Quantity"
+        unit_name: "Unit Name"
+        unit_price: "Unit Price"
+        discount_percentage: "Discount Percentage"
+        line_item_amount: "Line Item Amount"
+      lexoffice_client/role:
+        number: "Number"
+      lexoffice_client/unit_price:
+        << : *shared
+        net_amount: "Net Amount"
+        gross_amount: "Gross Amount"
+        tax_rate: "Tax Rate"

@@ -1,0 +1,9 @@
+source "https://rubygems.org"
+git_source(:github) { |repo| "https://github.com/#{repo}.git" }
+
+# Specify your gem's dependencies in bgit_hosting.gemspec.
+gemspec
+
+gem "lexoffice_client", path: "../lexoffice_client"
+
+gem "rails-dummy", github: "robotex82/rails-dummy", branch: "feature/ruby-3-2-compatibility"

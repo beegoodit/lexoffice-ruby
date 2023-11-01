@@ -1,0 +1,45 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.lexoffice.io/v1/files/2d5eb49b-3f1f-44dd-aa68-f4d342f2b039
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer invalid-token
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Date:
+      - Fri, 01 Sep 2023 12:49:26 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '27'
+      Connection:
+      - keep-alive
+      X-Amzn-Requestid:
+      - '09d884f4-b3b5-4b7d-891b-1a899c5a05d1'
+      X-Amzn-Errortype:
+      - UnauthorizedException
+      X-Amz-Apigw-Id:
+      - Kk-ZgGlkFiAFXzA=
+    body:
+      encoding: UTF-8
+      string: '{"message":"Unauthorized"}
+
+        '
+  recorded_at: Fri, 01 Sep 2023 12:49:24 GMT
+recorded_with: VCR 6.2.0

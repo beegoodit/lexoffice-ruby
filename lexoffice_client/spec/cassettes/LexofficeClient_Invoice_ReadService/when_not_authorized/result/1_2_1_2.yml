@@ -1,0 +1,41 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.lexoffice.io/v1/invoices/59a3008f-9d96-4629-92ed-74fdbb2a4767
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer invalid-token
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Date:
+      - Thu, 31 Aug 2023 10:16:59 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '26'
+      Connection:
+      - keep-alive
+      X-Amzn-Requestid:
+      - 1aed5cc8-e1db-4657-a2be-95bf64be5c6b
+      X-Amzn-Errortype:
+      - UnauthorizedException
+      X-Amz-Apigw-Id:
+      - KhVIWE1PFiAFguQ=
+    body:
+      encoding: UTF-8
+      string: '{"message":"Unauthorized"}'
+  recorded_at: Thu, 31 Aug 2023 10:16:58 GMT
+recorded_with: VCR 6.2.0

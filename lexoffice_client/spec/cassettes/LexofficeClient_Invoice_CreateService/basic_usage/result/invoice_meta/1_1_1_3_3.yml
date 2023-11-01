@@ -1,0 +1,46 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.lexoffice.io/v1/invoices
+    body:
+      encoding: UTF-8
+      string: '{"id":null,"organizationId":null,"createdDate":null,"updatedDate":null,"version":null,"language":null,"archived":null,"voucherStatus":null,"voucherNumber":null,"voucherDate":"2023-02-22T00:00:00.000+01:00","dueDate":null,"address":{"name":"Max
+        Mustermann","supplement":null,"street":null,"city":null,"zip":null,"countryCode":"DE","contactId":null},"lineItems":[],"totalPrice":{"currency":"EUR","totalNetAmount":null,"totalGrossAmount":null,"totalTaxAmount":null,"taxRatePercentage":null,"totalDiscountAbsolute":null,"totalDiscountPercentage":null},"taxAmounts":null,"taxConditions":{"taxType":"net"},"paymentConditions":null,"shippingConditions":{"shippingDate":null,"shippingType":"none"},"closingInvoice":null,"relatedVouchers":null,"introduction":null,"remark":null,"title":null}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer n2.o0c.raladGqUDySbv9ZKZaNKME0pf7W3YulfNjlaTV1TC
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Date:
+      - Fri, 01 Sep 2023 07:45:17 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '251'
+      Connection:
+      - keep-alive
+      X-Amzn-Requestid:
+      - d3efa959-8f6b-48e7-849d-24dca234a970
+      X-Amz-Apigw-Id:
+      - KkR2IFvtFiAFYZw=
+      X-Amzn-Trace-Id:
+      - Root=1-64f1968d-0c93322133a2581862b1d69b
+    body:
+      encoding: UTF-8
+      string: '{ "id" : "dc469e66-a60f-43ee-8567-57224dede71b", "resourceUri": "https://api.lexoffice.io/v1/invoices/dc469e66-a60f-43ee-8567-57224dede71b",
+        "createdDate": "2023-09-01T09:45:17.565+02:00", "updatedDate": "2023-09-01T09:45:17.567+02:00",
+        "version": 1 }'
+  recorded_at: Fri, 01 Sep 2023 07:45:16 GMT
+recorded_with: VCR 6.2.0

@@ -1,0 +1,98 @@
+de:
+  activemodel:
+    models:
+      lexoffice_client/contact/read_service:
+        one: "Kontaktlesedienst"
+        other: "Kontaktlesedienste"
+      lexoffice_client/invoice/read_service:
+        one: "Rechnungslesedienst"
+        other: "Rechnungslesedienste"
+      lexoffice_client/address:
+        one: "Lexoffice Adresse"
+        other: "Lexoffice Adressen"
+      lexoffice_client/company:
+        one: "Lexoffice Firma"
+        other: "Lexoffice Firmen"
+      lexoffice_client/document:
+        one: "Lexoffice Dokument"
+        other: "Lexoffice Dokumente"
+      lexoffice_client/contact:
+        one: "Lexoffice Kontakt"
+        other: "Lexoffice Kontakte"
+      lexoffice_client/invoice:
+        one: "Lexoffice Rechnung"
+        other: "Lexoffice Rechnungen"
+      lexoffice_client/role:
+        one: "Lexoffice Rolle"
+        other: "Lexoffice Rollen"
+    attributes:
+      shared: &shared
+        id: "ID"
+      lexoffice_client/contact/read_service:
+        contact_id: "Kontakt"
+      lexoffice_client/invoice/read_service:
+        invoice_id: "Rechnungs"
+      lexoffice_client/address:
+        city: "Stadt"
+        contact: "Kontakt"
+        country_code: "Ländercode"
+        name: "Name"
+        street: "Straße"
+        supplement: "Ergänzung"
+        zip: "PLZ"
+      lexoffice_client/company:
+        allow_tax_free_invoices: "Steuerfreie Rechnungen erlauben"
+        name: "Name"
+        tax_number: "Steuernummer"
+        vat_registration_id: "Umsatzsteuer-Identifikationsnummer"
+      lexoffice_client/contact:
+        << : *shared
+        addresses: "Adressen"
+        archived: "Archiviert"
+        company: "Firma"
+        email_addresses: "E-Mail-Adressen"
+        organization_id: "Organisations-ID"
+        roles: "Rollen"
+        version: "Version"
+      lexoffice_client/invoice:
+        << : *shared
+        address: "Adresse"
+        archived: "Archiviert"
+        closing_invoice: "Abschlussrechnung"
+        created_date: "Erstellungsdatum"
+        due_date: "Fälligkeitsdatum"
+        introduction: "Einleitung"
+        files: "Dateien"
+        language: "Sprache"
+        line_items: "Positionen"
+        organization_id: "Organisations-ID"
+        payment_conditions: "Zahlungsbedingungen"
+        related_vouchers: "Zugehörige Gutscheine"
+        remark: "Bemerkung"
+        shipping_conditions: "Versandbedingungen"
+        tax_amounts: "Steuermengen"
+        tax_conditions: "Steuerbedingungen"
+        title: "Titel"
+        total_price: "Gesamtpreis"
+        updated_date: "Aktualisierungsdatum"
+        version: "Version"
+        voucher_date: "Gutscheindatum"
+        voucher_number: "Gutscheinnummer"
+        voucher_status: "Gutscheinstatus"
+      lexoffice_client/line_item:
+        << : *shared
+        type: "Typ"
+        name: "Name"
+        description: "Beschreibung"
+        quantity: "Menge"
+        unit_name: "Einheitsname"
+        unit_price: "Stückpreis"
+        discount_percentage: "Rabattprozentsatz"
+        line_item_amount: "Positionsbetrag"
+      lexoffice_client/role:
+        number: "Nummer"
+      lexoffice_client/unit_price:
+        << : *shared
+        net_amount: "Nettobetrag"
+        gross_amount: "Bruttobetrag"
+        tax_rate: "Steuersatz"

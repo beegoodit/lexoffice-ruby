@@ -1,0 +1,44 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.lexoffice.io/v1/invoices/59a3008f-9d96-4629-92ed-74fdbb2a4767/document
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer n2.o0c.raladGqUDySbv9ZKZaNKME0pf7W3YulfNjlaTV1TC
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 406
+      message: Not Acceptable
+    headers:
+      Date:
+      - Fri, 01 Sep 2023 13:34:47 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '315'
+      Connection:
+      - keep-alive
+      X-Amzn-Requestid:
+      - 21160a3b-6f89-4dd5-a418-cdc79bccada6
+      X-Amz-Apigw-Id:
+      - KlFCxHu6FiAFlUA=
+      X-Amzn-Trace-Id:
+      - Root=1-64f1e877-22b4e6b05422d9c46167d2c9
+    body:
+      encoding: UTF-8
+      string: ' { "timestamp" : "2023-09-01T15:34:47.966+02:00", "status" : 406, "error"
+        : "Not Acceptable", "path": "/v1/invoices/59a3008f-9d96-4629-92ed-74fdbb2a4767/document",
+        "traceId": "cdc79bccada6", "requestId": "2ae9f0d9-7a73-4639-b750-4921ec59ae6a",
+        "message": "Requesting PDF document is not possible in state draft."  }'
+  recorded_at: Fri, 01 Sep 2023 13:34:46 GMT
+recorded_with: VCR 6.2.0

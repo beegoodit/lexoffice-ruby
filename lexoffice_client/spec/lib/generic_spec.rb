@@ -15,6 +15,8 @@ RSpec.describe "Lexoffice::Model::Base models", type: :model do
 
   {
     LexofficeClient::Address => {},
+    LexofficeClient::Contact => {},
+    LexofficeClient::Company => {},
     LexofficeClient::Document => {},
     LexofficeClient::Invoice => {},
     LexofficeClient::LineItem => {},

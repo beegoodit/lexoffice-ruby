@@ -1,0 +1,26 @@
+{
+  "id": "17fa5473-67c2-4115-8946-fff5b8c59098",
+  "organizationId": "f943ae79-b32e-4c2a-91c2-bb46ed940f90",
+  "version": 2,
+  "roles": {
+    "customer": {
+      "number": 10002
+    }
+  },
+  "company": {
+    "name": "ACME GmbH",
+    "allowTaxFreeInvoices": false
+  },
+  "addresses": {
+    "billing": [
+      {
+        "supplement": "",
+        "street": "Musterstr. 42",
+        "zip": "12345",
+        "city": "Musterhausen",
+        "countryCode": "DE"
+      }
+    ]
+  },
+  "archived": false
+}

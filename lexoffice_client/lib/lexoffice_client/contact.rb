@@ -15,6 +15,10 @@ module LexofficeClient
       end
     end
 
+    def addresses
+      @addresses ||= {}
+    end
+
     def company=(value)
       @company = value.is_a?(LexofficeClient::Company) ? value : LexofficeClient::Company.new(value)
     end

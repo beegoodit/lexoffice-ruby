@@ -15,16 +15,24 @@ module LexofficeClient
     end
 
     def post_invoice!
-      response = HTTParty.post("#{LexofficeClient::Configuration.api_base_url}/invoices", headers: request_headers, body: request_body)
+      say "Posting invoice to lexoffice" do
+        response = HTTParty.post(request_url, headers: request_headers, body: request_body)
 
-      @result.request_response = response
+        @result.request_response = response
 
-      if response.code != 201
-        add_error_and_say(:request, "HTTP Error: #{response.code}")
-        return
+        if response.code != 201
+          add_error_and_say(:request, "HTTP Error: #{response.code}")
+          say "Request body: #{request_body}"
+          say "Response body: #{response.body}"
+          return
+        end
+
+        JSON.parse(response.body).deep_transform_keys(&:underscore)
       end
+    end
 
-      JSON.parse(response.body).deep_transform_keys(&:underscore)
+    def request_url
+      @request_url ||= "#{LexofficeClient::Configuration.api_base_url}/invoices"
     end
 
     def request_headers

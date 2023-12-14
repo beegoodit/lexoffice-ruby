@@ -3,12 +3,12 @@ require "spec_helper"
 
 RSpec.describe LexofficeClient::File::ReadService, type: :service, vcr: true do
   before(:each) do
-    expect(LexofficeClient::Configuration).to receive(:api_base_url).and_return("https://api.lexoffice.io/v1")
+    expect(LexofficeClient::Configuration).to receive(:api_base_url).and_return(-> { "https://api.lexoffice.io/v1" })
   end
 
   describe "basic usage" do
     before(:each) do
-      expect(LexofficeClient::Configuration).to receive(:api_token).and_return("n2.o0c.raladGqUDySbv9ZKZaNKME0pf7W3YulfNjlaTV1TC")
+      expect(LexofficeClient::Configuration).to receive(:api_token).and_return(-> { "n2.o0c.raladGqUDySbv9ZKZaNKME0pf7W3YulfNjlaTV1TC" })
     end
 
     let(:file_id) { "2d5eb49b-3f1f-44dd-aa68-f4d342f2b039" }
@@ -32,7 +32,7 @@ RSpec.describe LexofficeClient::File::ReadService, type: :service, vcr: true do
 
   describe "when not authorized" do
     before(:each) do
-      expect(LexofficeClient::Configuration).to receive(:api_token).and_return("invalid-token")
+      expect(LexofficeClient::Configuration).to receive(:api_token).and_return(-> { "invalid-token" })
     end
 
     describe "result" do

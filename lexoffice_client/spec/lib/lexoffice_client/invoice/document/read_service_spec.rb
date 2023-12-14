@@ -3,12 +3,12 @@ require "spec_helper"
 
 RSpec.describe LexofficeClient::Invoice::Document::ReadService, type: :service, vcr: true do
   before(:each) do
-    expect(LexofficeClient::Configuration).to receive(:api_base_url).and_return("https://api.lexoffice.io/v1").at_least(:once)
+    expect(LexofficeClient::Configuration).to receive(:api_base_url).and_return(-> { "https://api.lexoffice.io/v1" }).at_least(:once)
   end
 
   describe "basic usage" do
     before(:each) do
-      expect(LexofficeClient::Configuration).to receive(:api_token).and_return("n2.o0c.raladGqUDySbv9ZKZaNKME0pf7W3YulfNjlaTV1TC").at_least(:once)
+      expect(LexofficeClient::Configuration).to receive(:api_token).and_return(-> { "n2.o0c.raladGqUDySbv9ZKZaNKME0pf7W3YulfNjlaTV1TC" }).at_least(:once)
     end
 
     describe "result" do
@@ -35,7 +35,7 @@ RSpec.describe LexofficeClient::Invoice::Document::ReadService, type: :service, 
 
   describe "when the invoice is a draft" do
     before(:each) do
-      expect(LexofficeClient::Configuration).to receive(:api_token).and_return("n2.o0c.raladGqUDySbv9ZKZaNKME0pf7W3YulfNjlaTV1TC").at_least(:once)
+      expect(LexofficeClient::Configuration).to receive(:api_token).and_return(-> { "n2.o0c.raladGqUDySbv9ZKZaNKME0pf7W3YulfNjlaTV1TC" }).at_least(:once)
     end
 
     describe "result" do
@@ -63,7 +63,7 @@ RSpec.describe LexofficeClient::Invoice::Document::ReadService, type: :service, 
 
   describe "when not authorized" do
     before(:each) do
-      expect(LexofficeClient::Configuration).to receive(:api_token).and_return("invalid-token")
+      expect(LexofficeClient::Configuration).to receive(:api_token).and_return(-> { "invalid-token" })
     end
 
     describe "result" do

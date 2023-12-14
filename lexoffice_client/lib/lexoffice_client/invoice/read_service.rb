@@ -15,7 +15,7 @@ module LexofficeClient
     end
 
     def get_invoice!
-      response = HTTParty.get("#{LexofficeClient::Configuration.api_base_url}/invoices/#{invoice_id}", headers: request_headers)
+      response = HTTParty.get("#{instance_exec(&LexofficeClient::Configuration.api_base_url)}/invoices/#{invoice_id}", headers: request_headers)
 
       @result.request_response = response
 
@@ -31,7 +31,7 @@ module LexofficeClient
 
     def request_headers
       @request_headers ||= {
-        "Authorization" => "Bearer #{LexofficeClient::Configuration.api_token}"
+        "Authorization" => "Bearer #{instance_exec(&LexofficeClient::Configuration.api_token)}"
       }
     end
   end

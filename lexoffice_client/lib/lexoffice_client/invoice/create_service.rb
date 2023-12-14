@@ -32,14 +32,14 @@ module LexofficeClient
     end
 
     def request_url
-      @request_url ||= "#{LexofficeClient::Configuration.api_base_url}/invoices"
+      @request_url ||= "#{instance_exec(&LexofficeClient::Configuration.api_base_url)}/invoices"
     end
 
     def request_headers
       @request_headers ||= {
         "Accept" => "application/json",
         "Content-Type" => "application/json",
-        "Authorization" => "Bearer #{LexofficeClient::Configuration.api_token}"
+        "Authorization" => "Bearer #{instance_exec(&LexofficeClient::Configuration.api_token)}"
       }
     end
 

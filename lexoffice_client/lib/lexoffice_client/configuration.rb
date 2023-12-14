@@ -19,7 +19,7 @@ module LexofficeClient
 
     @values = {}
 
-    define_option :api_token, default: ENV.fetch("LEXOFFICE_CLIENT_API_TOKEN", nil)
-    define_option :api_base_url, default: ENV.fetch("LEXOFFICE_CLIENT_API_BASE_URL", "https://api.lexoffice.io/v1")
+    define_option :api_token, default: -> { ENV.fetch("LEXOFFICE_CLIENT_API_TOKEN", nil) }
+    define_option :api_base_url, default: -> { ENV.fetch("LEXOFFICE_CLIENT_API_BASE_URL", "https://api.lexoffice.io/v1") }
   end
 end

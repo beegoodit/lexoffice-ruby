@@ -16,7 +16,7 @@ module LexofficeClient
 
     def get_file_io!
       say "Getting file with id #{file_id} from lexoffice" do
-        response = HTTParty.get("#{LexofficeClient::Configuration.api_base_url}/files/#{file_id}", headers: request_headers)
+        response = HTTParty.get("#{instance_exec(&LexofficeClient::Configuration.api_base_url)}/files/#{file_id}", headers: request_headers)
 
         @result.request_response = response
 
@@ -32,7 +32,7 @@ module LexofficeClient
     def request_headers
       @request_headers ||= {
         "Accept" => "*/*",
-        "Authorization" => "Bearer #{LexofficeClient::Configuration.api_token}"
+        "Authorization" => "Bearer #{instance_exec(&LexofficeClient::Configuration.api_token)}"
       }
     end
 

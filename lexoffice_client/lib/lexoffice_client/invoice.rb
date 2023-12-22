@@ -54,20 +54,20 @@ module LexofficeClient
     end
 
     def voucher_date=(value)
-      case value
+      @voucher_date = case value
       when String
-        @voucher_date = Date.parse(value)
+        Date.parse(value)
       else
-        super
+        value
       end
     end
 
     def due_date=(value)
-      case value
+      @due_date = case value
       when String
-        @due_date = Date.parse(value)
+       Date.parse(value)
       else
-        super
+        value
       end
     end
   end

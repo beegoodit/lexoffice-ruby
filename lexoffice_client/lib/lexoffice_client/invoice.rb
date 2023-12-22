@@ -52,5 +52,23 @@ module LexofficeClient
     def related_vouchers=(value)
       @related_vouchers = value.map { |v| v.is_a?(LexofficeClient::RelatedVoucher) ? v : LexofficeClient::RelatedVoucher.new(v) }
     end
+
+    def voucher_date=(value)
+      case value
+      when String
+        @voucher_date = Date.parse(value)
+      else
+        super
+      end
+    end
+
+    def due_date=(value)
+      case value
+      when String
+        @due_date = Date.parse(value)
+      else
+        super
+      end
+    end
   end
 end

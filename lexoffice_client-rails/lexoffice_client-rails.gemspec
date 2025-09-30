@@ -21,15 +21,8 @@ Gem::Specification.new do |spec|
     Dir["{lib,spec/factories}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
   end
 
-  spec.add_dependency "rails"
+  spec.required_ruby_version = ">= 3.4.5"
+
+  spec.add_dependency "rails", ">= 8.0"
   spec.add_dependency "lexoffice_client"
-  spec.add_development_dependency "bootsnap"
-  spec.add_development_dependency "factory_bot"
-  spec.add_development_dependency "guard-bundler"
-  spec.add_development_dependency "guard-rspec"
-  spec.add_development_dependency "guard-standardrb"
-  spec.add_development_dependency "rspec-rails"
-  spec.add_development_dependency "standardrb"
-  spec.add_development_dependency "vcr"
-  spec.add_development_dependency "webmock"
 end

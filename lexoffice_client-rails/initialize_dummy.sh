@@ -4,21 +4,42 @@
 rm -rf spec/dummy
 
 # Generate new dummy app
-DISABLE_MIGRATE=true bundle exec rake dummy:app
+CURRENT_DIR=$(pwd)
+TEMP_DIR=$(mktemp -d)
+cd $TEMP_DIR
+rails --version
+rails new dummy \
+  --skip-git \
+  --skip-bundle \
+  -T \
+  --javascript=importmap
+mv dummy $CURRENT_DIR/spec/dummy
+cd $CURRENT_DIR
+rm -rf $TEMP_DIR
 
-if [ ! -d "spec/dummy/config" ]; then exit 1; fi
+# Abort unless the dummy app was created successfully
+if [ ! -d "spec/dummy" ]; then
+  echo "Dummy app was not created successfully"
+  exit 1
+fi
 
-# Cleanup
-rm spec/dummy/.ruby-version
-rm spec/dummy/Gemfile
-
+# Proceed in the dummy app
 cd spec/dummy
 
-# Remove sprockets ralated stuff
-sed -i "s|config.assets|# config.assets|g" config/environments/development.rb
-sed -i "s|config.assets|# config.assets|g" config/environments/test.rb
-sed -i "s|config.assets|# config.assets|g" config/environments/production.rb
-rm config/initializers/assets.rb
+# Remove .ruby-version
+rm .ruby-version
+
+# In boot.rb use the Gemfile from the root directory
+sed -i 's|../Gemfile|../../../Gemfile|' config/boot.rb
+
+# Remove Gemfile*
+rm Gemfile*
+
+# install importmaps
+# bin/rails importmap:install
+
+# install turbo-rails
+# bin/rails turbo:install
 
 # Remove active record related stuff
 sed -i 's|require "action_mailbox/engine"|# require "action_mailbox/engine"|' config/application.rb
